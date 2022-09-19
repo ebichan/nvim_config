@@ -1,5 +1,5 @@
 local status, telescope = pcall(require, "telescope")
-if (not status) then return end
+if (not status) then error("error loading telescope") end
 local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
@@ -57,6 +57,9 @@ vim.keymap.set('n', '\\\\', function()
 end)
 vim.keymap.set('n', ';t', function()
   builtin.help_tags()
+end)
+vim.keymap.set('n', ';k', function()
+  builtin.keymaps()
 end)
 vim.keymap.set('n', ';;', function()
   builtin.resume()
