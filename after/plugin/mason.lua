@@ -13,6 +13,9 @@ local ensure_installed = {
 	"pyright",
 	"black",
 	"isort",
+	"clangd",
+	"bash-language-server",
+	"markdownlint",
 }
 
 mason.setup({})

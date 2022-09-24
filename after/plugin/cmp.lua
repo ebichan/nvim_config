@@ -52,6 +52,9 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "nvim_lsp_signature_help" },
+		{ name = "nvim_lsp_document_symbol" },
+		{ name = "cmp-cmdline" },
 	}),
 	formatting = {
 		format = lspkind.cmp_format({ with_text = false, maxwidth = 50 }),
