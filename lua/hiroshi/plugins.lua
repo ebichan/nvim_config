@@ -71,4 +71,6 @@ packer.startup(function(use)
 	-- use 'github/copilot.vim'
 	use("lewis6991/gitsigns.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
+	use("folke/todo-comments.nvim")
+	use("folke/trouble.nvim")
 end)

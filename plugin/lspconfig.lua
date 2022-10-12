@@ -96,6 +96,13 @@ nvim_lsp.clangd.setup({
 	filetypes = { "c", "cpp" },
 })
 
+--yaml
+nvim_lsp.yamlls.setup({
+	on_attach = on_attach,
+	cmd = { "yaml-language-server", "--stdio" },
+	filetypes = { "yaml", "yml" },
+})
+
 nvim_lsp.sourcekit.setup({
 	on_attach = on_attach,
 })
