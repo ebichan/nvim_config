@@ -1,5 +1,8 @@
 local keymap = vim.keymap
 
+-- better escape
+keymap.set("i", "jj", "<ESC>")
+
 -- bufferline
 keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", {})
 keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", {})
@@ -46,3 +49,11 @@ vim.api.nvim_set_keymap(
 	"<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>",
 	{}
 )
+
+-- trouble
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })

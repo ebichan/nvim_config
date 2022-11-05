@@ -96,10 +96,11 @@ nvim_lsp.clangd.setup({
 	filetypes = { "c", "cpp" },
 })
 
-nvim_lsp.clangd.setup({
+--yaml
+nvim_lsp.yamlls.setup({
 	on_attach = on_attach,
-	cmd = { "gopls" },
-	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+	cmd = { "yaml-language-server", "--stdio" },
+	filetypes = { "yaml", "yml" },
 })
 
 nvim_lsp.sourcekit.setup({

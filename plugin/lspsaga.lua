@@ -1,10 +1,13 @@
 local status, saga = pcall(require, "lspsaga")
 if not status then
-  return
+	return
 end
 
-saga.init_lsp_saga({})
-
+saga.init_lsp_saga({
+	symbol_in_winbar = {
+		enable = true,
+	},
+})
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "[g", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 vim.keymap.set("n", "]g", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
