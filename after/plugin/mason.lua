@@ -7,16 +7,7 @@ if not status2 then
 	return
 end
 
-local ensure_installed = {
-	"sumneko_lua",
-	"stylua",
-	"pyright",
-	"black",
-	"isort",
-	"clangd",
-	"bash-language-server",
-	"markdownlint",
-}
+local ensure_installed = {}
 
 mason.setup({})
 
