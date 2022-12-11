@@ -21,7 +21,7 @@ keymap.set("n", "<leader>d", "<Cmd>bdelete<CR>", {})
 keymap.set("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", {})
 
 -- terminal
-keymap.set("t", "<ESC>", "<C-\\><C-n>", {})
+keymap.set("t", "<ESC><ESC>", "<C-\\><C-n>", {})
 
 -- hop.nvim
 -- place this in one of your configuration file(s)
